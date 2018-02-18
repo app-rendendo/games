@@ -1,92 +1,135 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
-@import 'libs/skel';
 
 /*
-	Phantom by HTML5 UP
+	TXT by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* Basic */
+
+	.image {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+
+		&:before {
+			display: none;
+		}
+
+		img {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+		}
+	}
+
 /* Form */
 
 	form {
-		.field {
-			float: none !important;
-			width: 100% !important;
-			padding-left: 0 !important;
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		select,
+		textarea {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
 		}
 	}
 
 /* Button */
 
+	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
-	input[type="button"],
 	button,
 	.button {
-		border: solid 2px _palette(fg) !important;
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+	}
 
-		&:hover {
-			border-color: _palette(accent1) !important;
+/* List */
+
+	ul {
+		&.contact {
+			li {
+				a {
+					position: relative;
+					-ms-behavior: url('assets/js/ie/PIE.htc');
+				}
+			}
 		}
 
 		&.special {
-			border: none !important;
-		}
-	}
-
-/* Tiles */
-
-	.tiles {
-		article {
-			> .image {
-				&:before, &:after {
-					display: none;
-				}
+			a {
+				position: relative;
+				-ms-behavior: url('assets/js/ie/PIE.htc');
 			}
 		}
 	}
 
-/* Header */
+/* Copyright  */
 
-	#header {
-		.logo {
-			.symbol {
-				display: none;
-			}
-		}
+	#copyright {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+	}
 
-		nav {
-			ul {
-				li {
-					a[href="#menu"] {
-						text-indent: 0;
-						width: auto;
-						font-size: 0.8em;
+/* Nav */
 
-						&:before, &:after {
-							display: none;
-						}
-					}
-				}
+	#nav {
+		li {
+			a, span {
+				position: relative;
+				-ms-behavior: url('assets/js/ie/PIE.htc');
 			}
 		}
 	}
 
-/* Footer */
+/* Section/Article */
 
-	#footer {
-		> .inner {
-			section {
-				width: 50%;
-				margin-left: 3em;
+	section, article {
+		> .last-child,
+		&.last-child {
+			margin-bottom: 0;
+		}
+	}
 
-				&:first-child {
-					margin-left: 0;
-					width: 40%;
-				}
-			}
+/* Wrappers */
+
+	#banner-wrapper {
+		background-image: url('../../images/banner.jpg');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+
+		&:before {
+			display: none;
+		}
+	}
+
+/* Nav */
+
+	#nav {
+		background: #f8f8f8;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.dropotron {
+		box-shadow: none !important;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+	}
+
+/* Banner */
+
+	#banner {
+		background: rgb(21, 28, 23);
+
+		&:before {
+			display: none;
 		}
 	}
